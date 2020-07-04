@@ -5,7 +5,7 @@ export function fetchDevice() {
 }
 
 export function notify(value) {
-    return client('users', {
+    return client('notify', {
       method: 'POST',
       body: value,
     })

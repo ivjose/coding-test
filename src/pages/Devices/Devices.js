@@ -37,7 +37,7 @@ const Devices = ({ setIsLogin }) => {
     };
 
     try {
-      await notify({ value });
+      await notify(value);
       alert('Successfuly notify!');
     } catch (error) {
       alert('Error, Ops Something went wrong!');
