@@ -1,13 +1,16 @@
-import {client} from 'utils/api'
+import { client } from 'utils/api';
 
 export function fetchDevice() {
-  return client('devices')
+  return client('devices');
 }
 
 export function notify(value) {
-    return client('notify', {
+  return client(
+    'notify',
+    {
       method: 'POST',
       body: value,
-    })
-  }
-  
+    },
+    true
+  );
+}

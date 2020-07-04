@@ -1,6 +1,10 @@
 import { getToken } from './auth';
 
-export async function client(endpoint, { body, ...customConfig } = {}) {
+export async function client(
+  endpoint,
+  { body, ...customConfig } = {},
+  textFile = false
+) {
   const token = getToken();
   const headers = { 'Content-Type': 'application/json' };
   if (token) {
@@ -21,7 +25,7 @@ export async function client(endpoint, { body, ...customConfig } = {}) {
   return window
     .fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, config)
     .then(async (response) => {
-      const data = token ? await response.json() : await response.text();
+      const data = textFile ? await response.text() : await response.json();
 
       if (response.ok) {
         return data;
