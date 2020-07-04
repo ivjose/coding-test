@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Devices from 'pages/Devices';
+import Login from 'pages/Login';
+
+import { isLoggedIn } from 'utils/auth';
+
 import './App.css';
 
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    setIsLogin(isLoggedIn());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="main-wrap">
+      {isLogin ? (
+        <Devices setIsLogin={setIsLogin} />
+      ) : (
+        <Login setIsLogin={setIsLogin} />
+      )}
+    </section>
   );
 }
 

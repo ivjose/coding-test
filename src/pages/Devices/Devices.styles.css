@@ -1,0 +1,61 @@
+.devices-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ff7043;
+}
+
+.devices-content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.devices-btn-group {
+  padding: 20px;
+  text-align: center;
+  background-color: #00000030;
+}
+
+.devices-inner {
+  text-align: center;
+  color: #fff;
+}
+
+.devices-count {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 75px;
+  font-weight: 400;
+}
+.devices-text {
+  margin: 0;
+}
+
+.color-circle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+}
+
+.cricle-wrap {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transform-origin: center left;
+}
+
+.cricle {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}

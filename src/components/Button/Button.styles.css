@@ -1,0 +1,51 @@
+.button {
+  display: inline-block;
+  font-weight: 400;
+
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  color: #fff;
+  padding: 12px 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 0.25rem;
+  background-color: #0076bd;
+  border: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  color: #fff;
+  background-color: #01629c;
+}
+
+.button.light {
+  color: #212529;
+  background-color: #fff;
+}
+
+.button.light:hover,
+.button.light:focus {
+  color: #212529;
+  background-color: #eaeaea;
+}
+
+.button.dark {
+  color: #fff;
+  background-color: #36474e;
+}
+
+.button.dark:hover,
+.button.dark:focus {
+  color: #fff;
+  background-color: #1e272b;
+}
+
+.button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:not(:last-child) {
+}
