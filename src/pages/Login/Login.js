@@ -19,9 +19,9 @@ const Login = ({ setIsLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // if (password.toLocaleLowerCase() !== 'meld123') {
-    //   return setError('Sorry your password is incorrect');
-    // }
+    if (password.toLocaleLowerCase() !== 'meld123') {
+      return setError('Sorry your password is incorrect');
+    }
 
     try {
       const response = await login({ email, password });
