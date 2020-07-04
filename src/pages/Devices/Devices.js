@@ -32,7 +32,7 @@ const Devices = ({ setIsLogin }) => {
     const value = {
       name: 'Jose Santos IV',
       email: 'ivjosesantos@gmail.com',
-      repoUrl: '',
+      repoUrl: 'https://github.com/ivjose/coding-test',
       message: `Hi, I hope you're doing well and stay safe`,
     };
 
