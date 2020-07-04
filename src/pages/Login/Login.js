@@ -11,8 +11,8 @@ const warningIcon = `${process.env.PUBLIC_URL}/img/svg/warning-icon.svg`;
 const emailIcon = `${process.env.PUBLIC_URL}/img/svg/email-icon.svg`;
 
 const Login = ({ setIsLogin }) => {
-  const [email, setEmail] = useState('asdt@gmail.io');
-  const [password, setPassword] = useState('meld123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const [error, setError] = useState('');
 
@@ -26,11 +26,10 @@ const Login = ({ setIsLogin }) => {
     try {
       const response = await login({ email, password });
 
-
       setToken(response);
       setIsLogin(true);
     } catch (err) {
-      setError(err.error);
+      setError(err);
     }
   };
 
